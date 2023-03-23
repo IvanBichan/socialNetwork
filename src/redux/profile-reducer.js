@@ -40,7 +40,6 @@ const profileReducer = (state = initialState, action) => {
         default:
             return state
     }
-    return state
 }
 
 export const addPostActionCreator = () => ({type: ADD_POST,})

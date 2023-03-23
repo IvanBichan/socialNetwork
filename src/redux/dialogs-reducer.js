@@ -18,8 +18,6 @@ let initialState = {
 };
 
 const dialogsReducer = (state = initialState, action) => {
-    let stateCopy;
-
     switch (action.type) {
         case UPDATE_NEW_MESSAGE_BODY:
             return {
@@ -36,7 +34,6 @@ const dialogsReducer = (state = initialState, action) => {
         default:
             return state
     }
-    return state
 }
 
 export const sendMessageCreator = () => ({type: SEND_MESSAGE,})
