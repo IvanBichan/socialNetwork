@@ -13,13 +13,12 @@ export const usersApi = {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`)
             .then(res => res.data)
     },
-    unfollow (id) {
-        return instance.delete(`follow/${id}`)
-    },
     follow (id) {
         return instance.post(`follow/${id}`)
     },
-
+    unfollow (id) {
+        return instance.delete(`follow/${id}`)
+    },
 }
 
 
