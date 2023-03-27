@@ -2,9 +2,7 @@ import React from 'react';
 import s from "./Dialogs.module.css";
 import {DialogItem} from "./DialogItem/DialogItem";
 import {Message} from "./Message/Message";
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialogs-reducer";
-
-
+import {Navigate} from "react-router-dom";
 
 
 export const Dialogs = (props) => {
@@ -21,8 +19,9 @@ export const Dialogs = (props) => {
     let onNewMessageChange = (e) => {
        let body = e.currentTarget.value;
         props.updateNewMessageBody(body)
-       //props.store.dispatch(updateNewMessageBodyCreator(body))
     }
+    console.log(props.isAuth)
+    if(!props.isAuth) return <Navigate to="/login" replace={true}/>
 
     return (
         <div className={s.dialogs}>
