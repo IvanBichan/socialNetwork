@@ -21,7 +21,6 @@ export const Dialogs = (props) => {
         props.updateNewMessageBody(body)
     }
     console.log(props.isAuth)
-    if(!props.isAuth) return <Navigate to="/login" replace={true}/>
 
     return (
         <div className={s.dialogs}>
@@ -46,3 +45,4 @@ export const Dialogs = (props) => {
         </div>
     )
 }
+
