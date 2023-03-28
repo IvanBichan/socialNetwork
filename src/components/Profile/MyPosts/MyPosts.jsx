@@ -15,16 +15,11 @@ export const MyPosts = (props) => {
 
     let onAddPost = () => {
         props.addPost()
-        //let text = newPostElement.current.value;
-        //props.dispatch(addPostActionCreator())
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
         props.updateNewPostText(text);
-        /*let action = upDateNewPostTextActionCreator(text)
-        props.dispatch(action)*/
-
     }
 
     return (
