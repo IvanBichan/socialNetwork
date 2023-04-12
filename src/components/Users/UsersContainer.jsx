@@ -4,6 +4,7 @@ import {follow, getUsers, setCurrentPage, toggleFollowingProgress, unfollow,} fr
 import {Users} from './Users';
 import {Preloader} from "../common/Preloader/Preloader";
 import {compose} from "redux";
+import {Navigate} from "react-router-dom";
 
 
 class UsersAPIContainer extends React.Component {
@@ -17,7 +18,6 @@ class UsersAPIContainer extends React.Component {
 
     render() {
         return <>
-
             {this.props.isFetching ? <Preloader/> : null}
             <Users totalUsersCount={this.props.totalUsersCount}
                    pageSize={this.props.pageSize}
@@ -39,7 +39,8 @@ let mapStateToProps = (state) => {
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
         isFetching: state.usersPage.isFetching,
-        followingInProgress:state.usersPage.followingInProgress
+        followingInProgress:state.usersPage.followingInProgress,
+        isAuth: state.auth.isAuth,
     }
 }
 

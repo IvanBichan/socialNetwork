@@ -7,7 +7,7 @@ export const Header = (props) => {
         <header className={s.header}>
             <img src='https://cdn.pixabay.com/photo/2017/03/19/20/19/ball-2157465__340.png' alt={'logo'}/>
             <div className={s.loginBlock}>
-                {props.isAuth ? props.login
+                {props.isAuth ? <div>{props.login} - <button onClick={props.logout}>Log out</button></div>
                     : <NavLink to={"/login"}>Login</NavLink>
                 }
 
