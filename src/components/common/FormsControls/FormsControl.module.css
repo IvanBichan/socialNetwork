@@ -7,3 +7,9 @@
 .formControl.error span {
     color:red;
 }
+
+.formSummerError {
+    border: 1px red solid;
+    color:red;
+    padding: 5px;
+}
