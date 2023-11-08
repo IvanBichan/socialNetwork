@@ -1,9 +1,17 @@
-.userPhoto {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+.usersContainer{
+    display: flex;
+    margin: 10px 0;
+
+}
+.sidebar{
+    width: 30%;
+}
+.usersCards{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.usersCards nav{
+    align-self: center;
 }
 
-.selectPage {
-    font-weight: bold;
-}
